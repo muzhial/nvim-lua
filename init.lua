@@ -21,8 +21,8 @@ require("plugin-config.toggleterm")
 require("plugin-config.surround")
 require("plugin-config.comment")
 require("plugin-config.nvim-autopairs")
--- Git
--- require("plugin-config.gitsigns")
+require("plugin-config.gitsigns")
+require("plugin-config.vim-gutentags")
 -- 内置 LSP
 require("lsp.setup")
 require("lsp.cmp")
