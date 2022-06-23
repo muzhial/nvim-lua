@@ -25,13 +25,14 @@ lualine.setup({
   sections = {
     lualine_c = {
       "filename",
+      -- path = 2,
       -- {
         -- "lsp_progress",
         -- spinner_symbols = { " ", " ", " ", " ", " ", " " },
       -- },
     },
     lualine_x = {
-      "filesize",
+      -- "filesize",
       {
         "fileformat",
         -- symbols = {
