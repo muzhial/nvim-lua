@@ -92,11 +92,17 @@ vim.o.shortmess = vim.o.shortmess .. "c"
 vim.o.pumheight = 10
 
 -- always show tabline
-vim.o.showtabline = 2
+vim.o.showtabline = 4
 
 -- no longer need vim's mode prompt with enhanced status bar plugin
 vim.o.showmode = false
 
 -- config clipboard
 vim.opt.clipboard = "unnamedplus"
+
+-- complete enhance
+vim.o.wildmenu = true
+
+vim.o.list = false
+vim.o.listchars = "space:·,tab:··"
 

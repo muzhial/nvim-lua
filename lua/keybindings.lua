@@ -98,3 +98,24 @@ map("t", "<leader>j", [[ <C-\><C-N><C-w>j ]], opt)
 map("t", "<leader>k", [[ <C-\><C-N><C-w>k ]], opt)
 map("t", "<leader>l", [[ <C-\><C-N><C-w>l ]], opt)
 
+
+---------------------
+-- plugin keybindings
+-- ------------------
+
+-- nvim-tree.lua
+map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
+map("n", "f", ":NvimTreeRefresh<CR>", opt)
+
+-- telescope.nvim
+map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+map("n", "<leader>b", ":Telescope buffers<CR>", opt)
+
+-- treesitter
+
+-- treesitter 折叠
+map("n", "zz", ":foldclose<CR>", opt)
+map("n", "Z", ":foldopen<CR>", opt)
+

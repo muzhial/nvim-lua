@@ -33,14 +33,56 @@ packer.startup({
     -- colorschemes
     --------------------
     -- onedark
-    use("ful1e5/onedark.nvim")
-
+    -- use("ful1e5/onedark.nvim")
+    use("folke/tokyonight.nvim")
     --------------------
     -- lualine.nvim
     --------------------
     use({
       "nvim-lualine/lualine.nvim",
       requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" },
+    })
+
+    --------------------
+    -- nvim-tree.lua
+    --------------------
+    use({
+      "kyazdani42/nvim-tree.lua",
+      requires = "kyazdani42/nvim-web-devicons",
+    })
+
+    --------------------
+    -- nvim-autopairs
+    --------------------
+    use("windwp/nvim-autopairs")
+
+    --------------------
+    -- telescope.nvim
+    --------------------
+    use({
+      "nvim-telescope/telescope.nvim",
+      requires = { "nvim-lua/plenary.nvim" },
+    })
+
+    -------------------
+    -- nvim-treesitter 
+    -------------------
+    use({
+      "nvim-treesitter/nvim-treesitter",
+    })
+
+    --------------------
+    -- indent-blankline.nvim
+    -- depended with nvim-treesitter
+    --------------------
+    use("lukas-reineke/indent-blankline.nvim")
+
+    --------------------
+    -- LSP
+    --------------------
+    use({
+      "neovim/nvim-lspconfig",
+      "williamboman/nvim-lsp-installer"
     })
 
     if paccker_bootstrap then
