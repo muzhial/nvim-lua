@@ -1,14 +1,14 @@
 local lsp_installer = require("nvim-lsp-installer")
 
 local servers = {
-  sumneko_lua = require("lsp.config.lua"),
-  bashls = require("lsp.config.bash"),
+  --sumneko_lua = require("lsp.config.lua"),
+  bashls = require("lsp.conf.bash"),
   --html = require("lsp.config.html"),
   --cssls = require("lsp.config.css"),
   --emmet_ls = require("lsp.config.emmet"),
-  jsonls = require("lsp.config.json"),
+  --jsonls = require("lsp.conf.json"),
   --tsserver = require("lsp.config.ts"),
-  pyright = require("lsp.config.pyright")
+  pyright = require("lsp.conf.pyright")
 
   -- rust_analyzer = require("lsp.lang.rust"),
   -- remark_ls = require("lsp.lang.markdown"),

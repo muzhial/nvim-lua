@@ -84,7 +84,20 @@ packer.startup({
       "neovim/nvim-lspconfig",
       "williamboman/nvim-lsp-installer"
     })
+    -- complete engine
+    use("hrsh7th/nvim-cmp")
 
+    -- complete source
+    use("hrsh7th/cmp-vsnip")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+    use("hrsh7th/cmp-cmdline")
+    use("hrsh7th/cmp-nvim-lsp-signature-help")
+    -- UI enhancement
+    use("onsails/lspkind-nvim")
+    use("tami5/lspsaga.nvim")
+    --------------------
     if paccker_bootstrap then
       packer.sync()
     end
