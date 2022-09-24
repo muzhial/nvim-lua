@@ -6,7 +6,7 @@
 local cmp = require("cmp")
 
 cmp.setup({
-  -- 指定 snippet 引擎
+  -- snippet engine
   snippet = {
     expand = function(args)
       -- For `vsnip` users.
@@ -22,20 +22,22 @@ cmp.setup({
       -- require'snippy'.expand_snippet(args.body)
     end,
   },
-  -- 来源
+  -- source
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
     { name = "nvim_lsp_signature_help" },
     -- For vsnip users.
     { name = "vsnip" },
-    { name = "buffer" },
     -- For luasnip users.
     -- { name = 'luasnip' },
     --For ultisnips users.
     -- { name = 'ultisnips' },
     -- -- For snippy users.
     -- { name = 'snippy' },
-  }, { { name = "path" } }),
+  }, {
+    { name = "path" },
+    { name = "buffer" },
+  }),
 
   mapping = require("keybindings").cmp(cmp),
   -- 使用 lspkind-nvim 显示类型图标
@@ -50,11 +52,11 @@ cmp.setup.cmdline("/", {
 })
 
 -- Use cmdline & path source for ':'.
-cmp.setup.cmdline(":", {
-  sources = cmp.config.sources({
-    { name = "path" },
-  }, {
-    { name = "cmdline" },
-  }),
-})
+--cmp.setup.cmdline(":", {
+--  sources = cmp.config.sources({
+--    { name = "path" },
+--  }, {
+--    { name = "cmdline" },
+--  }),
+--})
 

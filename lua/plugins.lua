@@ -65,7 +65,7 @@ packer.startup({
     })
 
     -------------------
-    -- nvim-treesitter 
+    -- nvim-treesitter
     -------------------
     use({
       "nvim-treesitter/nvim-treesitter",
@@ -78,17 +78,23 @@ packer.startup({
     use("lukas-reineke/indent-blankline.nvim")
 
     --------------------
+    -- comment
+    --------------------
+    use("numToStr/Comment.nvim")
+
+    --------------------
     -- LSP
     --------------------
     use({
       "neovim/nvim-lspconfig",
-      "williamboman/nvim-lsp-installer"
     })
+    use("williamboman/nvim-lsp-installer")
+
     -- complete engine
     use("hrsh7th/nvim-cmp")
 
     -- complete source
-    use("hrsh7th/cmp-vsnip")
+    --use("hrsh7th/cmp-vsnip")
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-path")
@@ -96,7 +102,7 @@ packer.startup({
     use("hrsh7th/cmp-nvim-lsp-signature-help")
     -- UI enhancement
     use("onsails/lspkind-nvim")
-    use("tami5/lspsaga.nvim")
+    --use("tami5/lspsaga.nvim")
     --------------------
     if paccker_bootstrap then
       packer.sync()

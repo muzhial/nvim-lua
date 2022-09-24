@@ -117,6 +117,10 @@ map("n", "<leader>b", ":Telescope buffers<CR>", opt)
 map("n", "zz", ":foldclose<CR>", opt)
 map("n", "Z", ":foldopen<CR>", opt)
 
+-- Comment
+map("n", "<leader>/", "gcc", { noremap = false })
+map("v", "<leader>/", "gc", { noremap = false })
+
 
 local pluginKeys = {}
 -- LSP callback shortcut
@@ -159,7 +163,6 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
   mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
   mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
-  -- 未用
   -- mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
   -- mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
   -- mapbuf('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opt)
@@ -218,8 +221,8 @@ pluginKeys.cmp = function(cmp)
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif vim.fn["vsnip#available"](1) == 1 then
-        feedkey("<Plug>(vsnip-expand-or-jump)", "")
+      --elseif vim.fn["vsnip#available"](1) == 1 then
+      --  feedkey("<Plug>(vsnip-expand-or-jump)", "")
       elseif has_words_before() then
         cmp.complete()
       else
@@ -227,13 +230,13 @@ pluginKeys.cmp = function(cmp)
       end
     end, { "i", "s" }),
 
-    ["<S-Tab>"] = cmp.mapping(function()
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-        feedkey("<Plug>(vsnip-jump-prev)", "")
-      end
-    end, { "i", "s" }),
+    --["<S-Tab>"] = cmp.mapping(function()
+    --  if cmp.visible() then
+    --    cmp.select_prev_item()
+    --  elseif vim.fn["vsnip#jumpable"](-1) == 1 then
+    --    feedkey("<Plug>(vsnip-jump-prev)", "")
+    --  end
+    --end, { "i", "s" }),
     -- end of super Tab
   }
 end
